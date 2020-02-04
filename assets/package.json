@@ -1,0 +1,17 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sass scss:../static/css/ --watch"
+  },
+  "dependencies": {
+    "sass": "^1.25.0"
+  },
+  "devDependencies": {
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-scss": "^3.14.2"
+  }
+}

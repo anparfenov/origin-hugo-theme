@@ -1,0 +1,19 @@
+<header>
+    <div class="header header-frame">
+        <div>
+        <div class="header-title">{{.Site.Title}}</div>
+        {{if .Site.Params.Description}}
+        <div class="header-description">{{.Site.Params.Description}}</div>
+        {{end}}
+        </div>
+        <nav>
+            <ul class="header-nav">
+                {{ range .Site.Taxonomies.tags }}
+                            <li class="header-nav-item"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+                            {{end}}
+            </ul>
+        </nav>
+
+    </div>
+</header>
+

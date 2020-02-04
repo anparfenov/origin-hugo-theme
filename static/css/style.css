@@ -1,0 +1,150 @@
+:root {
+  --header-frame-bg: white;
+  --body-bg: rgba(255, 247, 240, 1);
+  --box-color: black;
+  --post-text-color: #343f44;
+  --post-card-bg: rgba(250, 250, 250, 0.8);
+  --post-card-text: rgba(71, 71, 71, 1);
+  --info-bg-color: rgba(255, 255, 255, 0.9);
+  --tags-bg-color: black;
+  --tags-clr: rgba(255, 255, 255, 0.9);
+  --nav-button-clr: rgba(74, 74, 74, 1);
+  --nav-button-lines: black;
+  --post-card-tag-bg-color: black;
+  --post-card-border-clr: rgba(120, 120, 120, 1);
+  --post-card-boxshdw-clr: rgba(100, 100, 100, 1);
+  --post-card-image-outline: rgba(100, 100, 100, 1);
+  --post-header-bg-color: white;
+  --home-btn-bg: white;
+  --home-btn-clr: black;
+  --home-btn-border: black;
+  --home-btn-boxshdw: gray;
+  --other-post-bg: white;
+  --other-post-border: black;
+  --other-post-ptr-clr: white;
+  --other-post-ptr-bg: black;
+  --other-post-title-clr: black;
+  --footer-bg-color: rgba(255, 255, 255, 0.9);
+  --post-page-bg: rgba(255, 255, 255, 0.9);
+  --post-page-thead-bg: rgba(255, 247, 240, 1);
+  --post-table-border: darkgray;
+  --post-code-bg: bisque;
+  --post-code-clr: black;
+  --post-h-color: black;
+  --post-strong-em-color: rgba(0, 0, 0, 0.9);
+  --post-a-color: black;
+  --post-bq-border: black;
+  --post-tr-hover: rgba(100, 100, 100, 0.2);
+  --text-decoration-color: coral;
+  --margin-between-cards: 15px;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+}
+@media (min-width: 1056px) {
+  header {
+    padding: 1rem 2rem;
+  }
+}
+
+.header-frame {
+  width: calc(100% - 2rem - 16px);
+  transform: translateX(-6px);
+  padding: 1rem;
+  background: var(--header-frame-bg);
+  border: 3px solid var(--box-color);
+  box-shadow: 11px 11px var(--box-color);
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  transform-style: preserve-3d;
+  overflow: visible;
+}
+
+.header-frame:after {
+  content: "";
+  position: absolute;
+  background: var(--box-color);
+  width: 17px;
+  height: 17px;
+  left: 1px;
+  bottom: -11px;
+  transform: translateZ(-1px) rotate(45deg);
+  z-index: -1;
+}
+
+.header-frame:before {
+  content: "";
+  position: absolute;
+  background: var(--box-color);
+  width: 15px;
+  height: 15px;
+  right: -10px;
+  top: 1px;
+  transform: translateZ(-1px) rotate(45deg);
+  z-index: -1;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
