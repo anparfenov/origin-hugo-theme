@@ -1,5 +1,4 @@
 @mixin flex-align($options) {
-    display: flex;
     @if $option == center {
        align-items: center;
     }
@@ -14,5 +13,16 @@
     }
     @else if $option == baseline {
         align-items: baseline;
+    }
+}
+@mixin flex-justify($options) {
+    @if $option == center {
+        justify-content: center;
+    }
+    @else if $option == start {
+        justify-content: flex-start;
+    }
+    @else if $option == end {
+        justify-content: flex-end;
     }
 }
