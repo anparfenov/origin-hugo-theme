@@ -1,0 +1,18 @@
+@mixin flex-align($options) {
+    display: flex;
+    @if $option == center {
+       align-items: center;
+    }
+    @else if $option == start {
+       align-items: flex-start;
+    }
+    @else if $option == end {
+       align-items: flex-end;
+    }
+    @else if $option == stretch {
+        align-items: stretch;
+    }
+    @else if $option == baseline {
+        align-items: baseline;
+    }
+}

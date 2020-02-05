@@ -147,4 +147,8 @@ header {
   font-weight: bold;
 }
 
+.header-nav {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
