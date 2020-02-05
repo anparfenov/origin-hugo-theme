@@ -1,2 +1,11 @@
 {{define "main"}}
+<div>
+  {{ $pages := .Pages }}
+      {{ if .IsHome }}
+      {{ $pages = .Site.RegularPages }}
+      {{ end }}
+      {{- range $pages -}}
+        {{ .Render "li" }}
+      {{- end }}
+</div>
 {{end}}

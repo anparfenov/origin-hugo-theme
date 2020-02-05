@@ -1,19 +1,34 @@
 <header>
-    <div class="header header-frame">
-        <div>
-        <div class="header-title">{{.Site.Title}}</div>
-        {{if .Site.Params.Description}}
-        <div class="header-description">{{.Site.Params.Description}}</div>
-        {{end}}
-        </div>
-        <nav>
-            <ul class="header-nav">
-                {{ range .Site.Taxonomies.tags }}
-                            <li class="header-nav-item"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-                            {{end}}
-            </ul>
-        </nav>
-
+  <div class="header header-frame">
+    <div>
+      <div class="header__title">{{.Site.Title}}</div>
+      {{if .Site.Params.Description}}
+      <div class="header__description">{{.Site.Params.Description}}</div>
+      {{end}}
     </div>
+    <nav class="header-nav desktop">
+      <ul class="header-nav-list">
+        {{ range .Site.Taxonomies.tags }}
+        <li class="header-nav-list__item">
+          <a class="header-nav-list__link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        </li>
+        {{end}}
+      </ul>
+    </nav>
+    <button class="header__menu-btn mobile">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+  </div>
+  <nav class="header-nav mobile">
+    <button class="header-nav__close-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+    </button>
+    <ul>
+      {{ range .Site.Taxonomies.tags }}
+      <li class="header-nav-list__item">
+        <a class="header-nav-list__link" href="{{ .Page.Permalink}}">{{.Page.Title}}</a>
+      </li>
+      {{end}}
+    </ul>
+  </nav>
 </header>
-
