@@ -1,9 +1,13 @@
-<a class="post-item" href="{{.Permalink}}">
+<section class="post-item" href="{{.Permalink}}">
     <div class="post-item-grid">
-        <div>HELLO</div>
         <div class="post-item-grid__title">
             <h2 class="post-item__title">{{.Title}}</h2>
             <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
         </div>
+        <a class="post-item__tag">
+            {{if isset .Params "tags"}}
+                <span class="post-item__tag-text">{{index .Params.tags 0}}</span>
+            {{end}}
+        </a>
     </div>
-</a>
+</section>

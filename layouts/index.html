@@ -1,4 +1,14 @@
 {{define "main"}}
+<div class="hero">
+    {{ if isset .Site.Params "featured" }}
+      <div class="featured-posts">
+        {{ $pages := .Site.RegularPages }}
+        {{range first 3 $pages}}
+          {{ .Render "summary" }}
+        {{end}}
+      </div>
+      {{end}}
+</div>
 <div class="post-list">
   {{ $pages := .Pages }}
       {{ if .IsHome }}
