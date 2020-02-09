@@ -1,13 +1,19 @@
-<section class="post-item" href="{{.Permalink}}">
+<article class="post-item">
     <div class="post-item-grid">
-        <div class="post-item-grid__title">
+        <a class="{{if isset .Params "tags"}}post-item-grid__title{{else}}post-item-grid__nopad{{end}} post-item__link" href="{{.Permalink}}">
             <h2 class="post-item__title">{{.Title}}</h2>
-            <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
-        </div>
-        <a class="post-item__tag">
-            {{if isset .Params "tags"}}
-                <span class="post-item__tag-text">{{index .Params.tags 0}}</span>
-            {{end}}
+            <time class="post-item__date" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
         </a>
+        <div class="post-item-grid__description post-item__description">{{.Description}}</div>
+        {{if isset .Params "image"}}
+        <div class="post-item-grid__image post-item__image">
+            <img src="{{printf "%s%s" .File.Dir .Params.image}}" alt="{{.Title}}" />
+        </div>
+        {{end}}
+        {{if isset .Params "tags"}}
+        <a href="/tags/{{index .Params.tags 0 | urlize}}" class="post-item__tag">
+            {{index .Params.tags 0}}
+        </a>
+        {{end}}
     </div>
-</section>
+</article>

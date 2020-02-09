@@ -1,4 +1,13 @@
 :root {
+  --color-bg: rgba(255,247,240, 1);
+  --color-text: black;
+  --color-text-2: #333333;
+  --color-text-light: white;
+  --color-text-light-2: rgba(255,255,255,0.9);
+  --color-hover: rgba(120,120,120, 1);
+  --color-border: rgba(120,120,120,1);
+  --color-border-dark: black;
+  --color-border-light: white;
   --header-frame-bg: white;
   --body-bg: rgba(255, 247, 240, 1);
   --box-color: black;
@@ -59,8 +68,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
+	font-size: 100%;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -71,6 +80,10 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -92,7 +105,14 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 @import "vars";
 @import "header";
+@import "main";
 @import "li";
 @import "list";
+@import "summary";

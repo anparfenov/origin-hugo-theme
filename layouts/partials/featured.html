@@ -1,0 +1,16 @@
+<div class="featured-post">
+    {{if isset .Params "image"}}
+        <img class="featured-post__image" src="{{printf "%s%s" .File.Dir .Params.image | absURL }}" alt="{{.Params.imageTitle}}" />
+        <div class="featured-post__image-filter"></div>
+    {{end}}
+    <a href="{{.Permalink}}" class="featured-post__wrapper">
+        <h2 class="featured-post__title">{{.Title}}</h2>
+        <div class="featured-post__description">{{.Description}}</div>
+        <time datetime="{{.Date}}">{{.Date.Format "2006/02/01"}}</time>
+    </a>
+    <ul class="featured-post__tags">
+        {{ range .Params.tags }}
+        <li><a href="/tags/{{. | urlize}}">{{.}}</a></li>
+        {{end}}
+    </ul>
+</div>

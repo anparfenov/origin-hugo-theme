@@ -1,6 +1,4 @@
 .post-item {
-  max-height: 200px;
-  text-decoration: none;
   color: var(--color-text);
   padding: 0.5rem;
   position: relative;
@@ -15,11 +13,30 @@
   transition-property: box-shadow, transform;
   transition-duration: 0.2s, 0.3s;
   transition-timing-function: ease;
-  display: block;
 
   &:hover {
     transform: translate(4px, 4px);
     box-shadow: 1px 1px var(--post-card-box-shdw-clr);
+  }
+
+  &__description {
+    color: var(--color-text-2);
+  }
+
+  &__date {
+    color: var(--color-text-2);
+    font-family: monospace;
+  }
+
+  &__image {
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
@@ -28,24 +45,22 @@
     margin-bottom: 0.4rem;
     color: black;
   }
+
   &__tag {
-    color: var(--post-card-text);
-    text-decoration: none;
+    position: absolute;
+    padding: 3px 5px;
+    background: var(--color-text);
+    color: var(--color-text-light);
+    top: 0;
+    left: 0;
+    border: 1px solid var(--color-border-dark);
+    max-height: 30px;
     display: block;
   }
   &__tag:hover {
-    color: black;
-    text-decoration: underline black;
-  }
-  &__tag-text {
-    position: absolute;
-    padding: 3px 5px;
-    background: var(--post-card-tag-bg-color);
-    color: white;
-    top: 0;
-    left: 0;
-    border: 1px solid var(--post-card-tag-bg-color);
-    max-height: 30px;
+    background: var(--color-text-light);
+    color: var(--color-text);
+    cursor: pointer;
   }
 }
 
@@ -55,6 +70,8 @@
 
 .post-item-grid {
   display: grid;
+  height: 100%;
+  overflow: hidden;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   grid-template-rows: minmax(auto, 25px) minmax(0, auto) auto;
   grid-column-gap: 8px;
@@ -62,18 +79,21 @@
   grid-template-areas:
   'pad image'
   'title image'
-  'excerpt image'
-  'excerpt image'
-  'excerpt image';
+  'description image';
+
+  &__nopad {
+    grid-row: pad/title;
+  }
 
   &__title {
     grid-area: title;
   }
   &__image {
     grid-area: image;
+    align-self: start;
   }
-  &__excerpt {
-    grid-area: excerpt;
+  &__description {
+    grid-area: description;
   }
   &__pad {
     grid-area: pad;
