@@ -1,3 +1,6 @@
 #content {
   padding: 1%; 
+  max-width: $screen-max; 
+  margin: 0 auto;
+  background: var(--color-bg);
 }

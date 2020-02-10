@@ -1,31 +1,29 @@
 {{define "main"}}
-<div class="hero">
-    {{ if isset .Site.Params "featured" }}
-        <div class="featured-posts">
-            {{ $pages := .Site.RegularPages }}
-            {{range first 3 $pages}}
-            {{ partial "featured" . }}
-            {{end}}
-        </div>
-        <div class="post-list">
-            {{ $pages := .Pages }}
-            {{ if .IsHome }}
-            {{ $pages = .Site.RegularPages }}
-            {{ end }}
-            {{ range after 3 $pages }}
-            {{ .Render "li" }}
-            {{ end }}
-        </div>
-    {{else}}
-        <div class="post-list">
-            {{ $pages := .Pages }}
-            {{ if .IsHome }}
-            {{ $pages = .Site.RegularPages }}
-            {{ end }}
-            {{ range $pages }}
-            {{ .Render "li" }}
-            {{ end }}
-        </div>
+{{ if isset .Site.Params "featured" }}
+<div class="featured-posts">
+    {{ $pages := .Site.RegularPages }}
+    {{range first 3 $pages}}
+        {{ partial "featured" . }}
     {{end}}
 </div>
+<div class="post-list">
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+        {{ $pages = .Site.RegularPages }}
+    {{ end }}
+    {{ range after 3 $pages }}
+       {{ .Render "li" }}
+    {{ end }}
+</div>
+{{else}}
+<div class="post-list">
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+        {{ $pages = .Site.RegularPages }}
+    {{ end }}
+    {{ range $pages }}
+        {{ .Render "li" }}
+    {{ end }}
+</div>
+{{end}}
 {{end}}

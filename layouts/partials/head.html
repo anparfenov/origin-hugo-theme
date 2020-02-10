@@ -1,4 +1,5 @@
 <head>
     <title>{{ .Title }}</title>
-    <link rel="stylesheet" href="css/style.css" >
+    {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{$style.Permalink}}" >
 </head>

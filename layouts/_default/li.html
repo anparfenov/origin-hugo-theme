@@ -1,14 +1,25 @@
 <article class="post-item">
     <div class="post-item-grid">
-        <a class="{{if isset .Params "tags"}}post-item-grid__title{{else}}post-item-grid__nopad{{end}} post-item__link" href="{{.Permalink}}">
+        {{$test := "test"}}
+        {{$title_class := "post-item-grid__title"}}
+        {{if not (isset .Params "description")}}
+        {{$title_class = "post-item-grid__nodesc"}}
+        {{else if not (isset .Params "tags")}}
+        {{$title_class = "post-item-grid__nopad"}}
+        {{end}}
+        <a class="{{$title_class}} post-item__link" href="{{.Permalink}}">
             <h2 class="post-item__title">{{.Title}}</h2>
             <time class="post-item__date" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
         </a>
-        <div class="post-item-grid__description post-item__description">{{.Description}}</div>
+        {{if isset .Params "description"}}
+        <a class="post-item-grid__description post-item__link" href="{{.Permalink}}">
+            <div class="post-item__description">{{.Description}}</div>
+        </a>
+        {{end}}
         {{if isset .Params "image"}}
-        <div class="post-item-grid__image post-item__image">
+        <a class="post-item-grid__image post-item__image" href="{{.Permalink}}">
             <img src="{{printf "%s%s" .File.Dir .Params.image}}" alt="{{.Title}}" />
-        </div>
+        </a>
         {{end}}
         {{if isset .Params "tags"}}
         <a href="/tags/{{index .Params.tags 0 | urlize}}" class="post-item__tag">
