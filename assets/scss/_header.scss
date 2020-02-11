@@ -1,10 +1,7 @@
 header {
   max-width: $screen-max;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
-  @media (min-width: $screen-lg) {
-    padding: 1rem 2rem;
-  }
+  padding: 1rem 2%;
 }
 
 .header {
@@ -68,7 +65,7 @@ header {
 }
 
 .header-frame {
-  width: calc(100% - 2rem - 16px);
+  width: calc(100%);
   transform: translateX(-6px);
   padding: 1rem;
   background: var(--color-header-bg);

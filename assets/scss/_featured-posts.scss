@@ -25,6 +25,10 @@
   transition-duration: 0.2s, 0.3s;
   transition-timing-function: ease;
 
+  & time {
+    font-family: monospace;
+  }
+
   &:hover {
     background: var(--color-hover);
     transform: translate(4px, 4px);
@@ -34,6 +38,7 @@
   &__wrapper {
     padding: 1rem;
     background: transparent;
+    display: block;
   }
 
   &__image {
@@ -70,6 +75,7 @@
 
   &__tags {
     display: flex;
+    flex-flow: row wrap;
     position: relative;
     z-index: 1;
     margin-top: 1rem;
@@ -77,10 +83,11 @@
     & > li {
       padding: 0.5rem;
       border: 1px solid var(--color-border);
-    }
-
-    & > li:not(:last-of-type) {
-      margin-right: 1rem; 
+      margin: 0.5rem; 
+      &:hover {
+       background: rgba(0,0,0,0.8); 
+       box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.4);
+      }
     }
   }
 
