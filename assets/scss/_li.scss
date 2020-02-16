@@ -76,20 +76,75 @@
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   grid-template-rows: minmax(auto, 25px) minmax(0, auto) auto;
   grid-column-gap: 0.5rem;
-  grid-row-gap: 1rem;
   align-items: center;
   grid-template-areas:
-  'pad image'
-  'title image'
-  'description image';
+    'pad image'
+    'title image'
+    'description image';
 
-  &__nopad {
-    grid-row: pad/title;
+  &--nopad {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, auto) auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'title image'
+      'description image';
+  }
+
+  &--noimage {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, 2rem) auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'pad description'
+      'title description';
+  }
+
+  &--nodesc {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, 2rem) auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'pad image'
+      'title image';
+  }
+
+  &--only-title {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'title .';
+  }
+
+  &--title-with-tag {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, 2rem) auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'pad .'
+      'title .';
+  }
+  &--noimage-nopad {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: minmax(0, auto) auto;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas:
+      'title .'
+      'description .';
   }
 
   &__title {
     grid-area: title;
     align-self: start;
+    height: 100%;
+    margin-bottom: 1rem;
   }
   &__image {
     grid-area: image;
@@ -97,11 +152,9 @@
   &__description {
     grid-area: description;
     align-self: start;
+    height: 100%;
   }
   &__pad {
     grid-area: pad;
-  }
-  &__nodesc {
-    grid-row: title / description;
   }
 }

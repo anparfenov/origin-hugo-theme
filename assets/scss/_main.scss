@@ -3,4 +3,7 @@
   max-width: $screen-max; 
   margin: 0 auto;
   background: var(--color-bg);
+  @media (min-width: $screen-lg) {
+    padding: 4%;
+  }
 }

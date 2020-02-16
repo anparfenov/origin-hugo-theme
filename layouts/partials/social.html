@@ -1,0 +1,120 @@
+{{ $icon_size := "32px" }}
+{{ with .Param "stackoverflow" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Stack Overflow link"
+  rel="noopener"
+  aria-label="follow on Stack Overflow——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-stackoverflow-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "facebook" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Facebook link"
+  rel="noopener"
+  aria-label="follow on Facebook——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-facebook-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "twitter" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Twitter link"
+  rel="noopener"
+  aria-label="follow on Twitter——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-twitter-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "instagram" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Instagram link"
+  rel="noopener"
+  aria-label="follow on Instagram——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-instagram-12.svg"}}
+</a>
+{{ end }}
+{{ with .Param "youtube" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Youtube link"
+  rel="noopener"
+  aria-label="follow on Youtube——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-youtube-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "linkedin" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="LinkedIn link"
+  rel="noopener"
+  aria-label="follow on LinkedIn——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-linkedin-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "github" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Github link"
+  rel="noopener"
+  aria-label="follow on Github——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-github-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "gitlab" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Gitlab link"
+  rel="noopener"
+  aria-label="follow on Gitlab——Opens in a new window"
+>
+</a>
+{{ end }}
+{{ with .Param "medium" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Medium link"
+  rel="noopener"
+  aria-label="follow on Medium——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-medium-2.svg"}}
+</a>
+{{ end }}
+{{ with .Param "slack" }}
+<a
+  href="{{ . }}"
+  target="_blank"
+  class="social-link"
+  title="Slack link"
+  rel="noopener"
+  aria-label="follow on Slack——Opens in a new window"
+>
+  {{partial "svg/iconmonstr-slack-3.svg"}}
+</a>
+{{ end }}

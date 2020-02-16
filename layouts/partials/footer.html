@@ -1,2 +1,10 @@
+<footer>
+    <div class="footer">
+        {{with .Site.Copyright }}
+            <div>{{ . | safeHTML }}</div>
+        {{end}}
+        <div class="footer__socials">{{partial "social.html" .}}</div>
+    </div>
+</footer>
 {{$script := resources.Get "js/script.js"}}
 <script src="{{$script.Permalink}}"></script>

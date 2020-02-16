@@ -1,4 +1,8 @@
-<article>
-    <h1>{{.Title}} </h1>
-    <div>{{.Content}}</div>
+{{define "header"}}
+    {{partial "post-header.html" .}}
+{{end}}
+{{define "main"}}
+<article class="post">
+    <div class="post-content">{{.Content}}</div>
 </article>
+{{end}}

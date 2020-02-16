@@ -1,29 +1,41 @@
+{{define "header"}}
+    {{partial "header.html" .}}
+{{end}}
+
 {{define "main"}}
-{{ if isset .Site.Params "featured" }}
+
+{{ $paginator := .Paginator }}
+{{ if  .Site.Params.featured }}
+<h2 class="featured-title">FEATURED</h2>
+{{ if eq $paginator.PageNumber 1 }}
 <div class="featured-posts">
     {{ $pages := .Site.RegularPages }}
     {{range first 3 $pages}}
         {{ partial "featured" . }}
     {{end}}
 </div>
+{{end}}
 <div class="post-list">
-    {{ $pages := .Pages }}
-    {{ if .IsHome }}
-        {{ $pages = .Site.RegularPages }}
-    {{ end }}
-    {{ range after 3 $pages }}
-       {{ .Render "li" }}
-    {{ end }}
+    {{if eq $paginator.PageNumber 1}}
+        {{ range after 3 $paginator.Pages }}
+            {{ .Render "li" }}
+        {{ end }}
+    {{else}}
+        {{ range $paginator.Pages }}
+            {{ .Render "li" }}
+        {{ end }}
+    {{end}}
+
+    {{ partial "pagination" . }}
 </div>
 {{else}}
 <div class="post-list">
-    {{ $pages := .Pages }}
-    {{ if .IsHome }}
-        {{ $pages = .Site.RegularPages }}
-    {{ end }}
-    {{ range $pages }}
+    {{ range $paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
+
+    {{ partial "pagination" . }}
 </div>
 {{end}}
+
 {{end}}

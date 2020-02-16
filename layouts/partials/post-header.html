@@ -1,20 +1,13 @@
 <header>
   <div class="header header-frame">
     <div>
-      <div class="header__title">{{.Site.Title}}</div>
-      {{if .Site.Params.Description}}
-      <div class="header__description">{{.Site.Params.Description}}</div>
+      <div class="header__title">{{.Title}}</div>
+      {{with .Description}}
+      <div class="header__description">{{.}}</div>
       {{end}}
     </div>
     <nav class="header-nav desktop">
       <ul class="header-nav-list">
-        {{ range .Site.Taxonomies.tags }}
-        <li class="header-nav-list__item">
-          <a class="header-nav-list__link" href="{{ .Page.Permalink }}"
-            >{{ .Page.Title }}</a
-          >
-        </li>
-        {{end}}
       </ul>
     </nav>
     <button class="mb-header__menu-btn">
@@ -51,13 +44,7 @@
       </button>
     </div>
     <ul class="mb-header-nav-list mobile">
-      {{ range .Site.Taxonomies.tags }}
-      <li class="mb-header-nav-list__item">
-        <a class="mb-header-nav-list__link" href="{{ .Page.Permalink}}"
-          >{{.Page.Title}}</a
-        >
-      </li>
-      {{end}}
     </ul>
   </nav>
 </header>
+

@@ -1,0 +1,26 @@
+footer {
+  max-width: $screen-max;
+  margin: auto auto 0 auto;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  padding: 1rem 2rem;
+  background: var(--color-footer-bg);
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 8px 0px var(--color-boxshadow);
+  @media (min-width: $screen-md) {
+    width: 80%;
+  }
+
+  &__socials {
+    display: flex;
+    align-items:center;
+  }
+}
