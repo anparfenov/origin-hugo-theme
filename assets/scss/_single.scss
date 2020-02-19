@@ -1,0 +1,164 @@
+.post {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.post-content {
+  h1{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.825rem 0;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: semibold;
+    margin: 0.825rem 0;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: semibold;
+    margin: 0.825rem 0;
+  }
+  h5 {
+    font-size: 1rem;
+    margin: 0.825rem 0;
+  }
+  h6 {
+    font-size: 0.75rem;
+    margin: 0.825rem 0;
+  }
+  h1,h2,h3,h4,h5,h6,p,code,blockquote,a {
+    line-height: 1.4;
+    @media (min-width: $screen-lg) {
+      line-height: 1.5;
+    }
+  }
+  p {
+    margin: 1rem 0;
+    color: var(--color-text-2);
+  }
+  blockquote {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--color-border);
+    font-family: $monospace;
+  }
+  code {
+    padding: 1px 3px;
+    border-radius: 2px;
+    background-color: var(--color-code-bg);
+    color: var(--color-text-light);
+  }
+  pre code {
+    color: inherit;
+    background-color: inherit;
+    padding: 0;
+    border-radius: inherit;
+  }
+  .highlight pre {
+    padding: 1rem;
+  }
+  .highlight code {
+    color: inherit;
+    background-color: inherit;
+    padding: 0;
+    border-radius: inherit;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+  }
+  ol {
+    list-style-type: decimal;
+    padding-left: 1rem;
+  }
+  a {
+    color: var(--color-link);
+    border-bottom: 1px solid var(--color-border);
+  }
+  a:hover {
+    border-bottom: 3px solid var(--color-border);
+    background-color: var(--color-link-bg);
+  }
+  table {
+    margin: 0.5rem 0; 
+  }
+  table th {
+    padding: 0.5rem;
+    background: var(--color-extra);
+  }
+  table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+    border-collapse: collapse;
+  }
+  table tbody tr:nth-child(even) {
+    background: var(--color-table-bg);
+  }
+  table tbody tr:hover {
+    background: var(--color-hover);
+    color: var(--color-text-light);
+  }
+  cite {
+    font-family: $monospace;
+  }
+  sub {
+    vertical-align: sub;
+  }
+  sup {
+    vertical-align: super;
+  }
+  kbd {
+    background: var(--color-code-bg);
+    padding: 1px 3px;
+    border-radius: 2px;
+    color: var(--color-text-light);
+  }
+  mark {
+    background-color: var(--color-extra);
+    padding: 1px 3px;
+    border-radius: 2px;
+    border: 1px solid var(--color-border);
+  }
+  strong {
+    font-weight: bold;
+  }
+  div[class~="__h_instagram"] {
+    margin: 1rem auto;
+  }
+  div[class~="__h_instagram"].card > .card-header {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    text-align: center;
+  }
+  div[class~="__h_instagram"].card > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+  }
+  div[class~="__h_instagram"].card > a:hover {
+    border:none;
+  }
+  div[class~="__h_instagram"].card > .card-body {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    text-align: center;
+  }
+  div[class~="__h_instagram"].card > a > .img-fluid {
+    border: 1px solid var(--color-border);
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+  }
+  blockquote.twitter-tweet {
+    border-left: 4px solid var(--color-twitter);
+  }
+}

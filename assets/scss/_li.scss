@@ -6,6 +6,7 @@
   margin-right: auto;
   margin-left: auto;
   width: calc(100%);
+  max-height: 250px;
   background: var(--color-card-bg);
   transition: transform 0.2s ease;
   border: 1px solid var(--color-border);
@@ -19,7 +20,16 @@
     box-shadow: 1px 1px var(--color-boxshadow);
   }
 
+  &__meta {
+    padding-top: 1.5rem;
+  }
+  &__meta.no-tag{
+    padding-top: 0;
+  }
+
   &__description {
+    line-height:1.5;
+    margin-top: 0.5rem;
     color: var(--color-text-2);
   }
 
@@ -27,23 +37,38 @@
     color: var(--color-text-2);
     font-family: monospace;
   }
+  &--left {
+    flex: 1 1 47%;
+    margin-right: 1rem;
+  }
+
+  &--right {
+    flex: 1 1 47%;
+  }
 
   &__image {
+    display: block;
+    padding-top: 20%;
     border: 1px solid var(--color-border);
     overflow: hidden;
+    position: relative;
 
     & > img {
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      max-height: 10rem;
     }
   }
 
   &__title {
+    line-height: 1.2;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
     color: black;
   }
 
@@ -69,92 +94,7 @@
   margin-bottom: 1rem;
 }
 
-.post-item-grid {
-  display: grid;
-  height: 100%;
+.post-item-flex {
+  display: flex;
   overflow: hidden;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  grid-template-rows: minmax(auto, 25px) minmax(0, auto) auto;
-  grid-column-gap: 0.5rem;
-  align-items: center;
-  grid-template-areas:
-    'pad image'
-    'title image'
-    'description image';
-
-  &--nopad {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, auto) auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'title image'
-      'description image';
-  }
-
-  &--noimage {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, 2rem) auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'pad description'
-      'title description';
-  }
-
-  &--nodesc {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, 2rem) auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'pad image'
-      'title image';
-  }
-
-  &--only-title {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'title .';
-  }
-
-  &--title-with-tag {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, 2rem) auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'pad .'
-      'title .';
-  }
-  &--noimage-nopad {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    grid-template-rows: minmax(0, auto) auto;
-    grid-column-gap: 0.5rem;
-    align-items: center;
-    grid-template-areas:
-      'title .'
-      'description .';
-  }
-
-  &__title {
-    grid-area: title;
-    align-self: start;
-    height: 100%;
-    margin-bottom: 1rem;
-  }
-  &__image {
-    grid-area: image;
-  }
-  &__description {
-    grid-area: description;
-    align-self: start;
-    height: 100%;
-  }
-  &__pad {
-    grid-area: pad;
-  }
 }

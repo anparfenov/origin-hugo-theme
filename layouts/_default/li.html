@@ -1,31 +1,15 @@
 <article class="post-item">
-        {{$grid_class := ""}}
-        {{if (not (isset .Params "description")) | and (not (isset .Params "image")) | and (not (isset .Params "tags"))}}
-            {{$grid_class = "post-item-grid--only-title"}}
-        {{else if (not (isset .Params "description")) | and (not (isset .Params "image"))}}
-            {{$grid_class = "post-item-grid--title-with-tag"}}
-        {{else if (not (isset .Params "tags") | and (not (isset .Params "image")))}}
-            {{$grid_class = "post-item-grid--noimage-nopad"}}
-        {{else if not (isset .Params "description")}}
-            {{$grid_class = "post-item-grid--nodesc"}}
-        {{else if not (isset .Params "image")}}
-            {{$grid_class = "post-item-grid--noimage"}}
-        {{else if not (isset .Params "tags")}}
-            {{$grid_class = "post-item-grid--nopad"}}
-        {{end}}
-        <div class="post-item-grid {{$grid_class}}">
-        <a class="post-item-grid__title post-item__link" href="{{.Permalink}}">
+        <div class="post-item-flex">
+            <a class="{{if not (isset .Params "tags")}}no-tag{{end}} post-item__meta post-item--left" href="{{.Permalink}}">
             <h2 class="post-item__title">{{.Title}}</h2>
             <time class="post-item__date" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
-        </a>
         {{if isset .Params "description"}}
-        <a class="post-item-grid__description post-item__link" href="{{.Permalink}}">
             <div class="post-item__description">{{.Description}}</div>
-        </a>
         {{end}}
+        </a>
         {{if isset .Params "image"}}
-        <a class="post-item-grid__image post-item__image" href="{{.Permalink}}">
-            <img src="{{printf "%s%s" .File.Dir .Params.image}}" alt="{{.Title}}" />
+        <a class="post-item--right post-item__image" href="{{.Permalink}}">
+            <img src="{{printf "%s%s" .File.Dir .Params.image | absURL}}" alt="{{.Title}}" />
         </a>
         {{end}}
         {{if isset .Params "tags"}}

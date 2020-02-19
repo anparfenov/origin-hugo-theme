@@ -6,7 +6,6 @@
 
 {{ $paginator := .Paginator }}
 {{ if  .Site.Params.featured }}
-<h2 class="featured-title">FEATURED</h2>
 {{ if eq $paginator.PageNumber 1 }}
 <div class="featured-posts">
     {{ $pages := .Site.RegularPages }}

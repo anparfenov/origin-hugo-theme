@@ -1,3 +1,5 @@
+@import "vars";
+
 :root {
   --color-bg: rgba(255,247,240, 1);
   --color-card-bg: rgba(250,250,250,0.8);
@@ -6,62 +8,29 @@
   --color-text-2: #333333;
   --color-text-light: white;
   --color-text-light-2: rgba(255,255,255,0.9);
+  --color-link: #0F4C81;
   --color-hover: linear-gradient(to right, rgba(120,120,120,1) 0%, rgba(120,120, 120,0.7) 50%);
   --color-border: rgba(120,120,120,1);
   --color-border-dark: black;
   --color-border-light: white;
+  --color-header-border: black;
   --color-boxshadow: rgba(100,100,100,1);
   --color-boxshadow-dark: rgba(70,70,70,1);
   --color-extra: #ffecbc;
   --color-footer-bg: rgba(250,250,250,0.8);
   --color-code-bg: rgba(100,100,100,1);
   --color-table-bg: rgba(200,200,200);
-
   --color-blockquote: #999999;
-  --box-color: black;
-  --post-text-color: #343f44;
-  --post-card-bg: rgba(250, 250, 250, 0.8);
-  --post-card-text: rgba(71, 71, 71, 1);
-  --info-bg-color: rgba(255, 255, 255, 0.9);
-  --tags-bg-color: black;
-  --tags-clr: rgba(255, 255, 255, 0.9);
-  --nav-button-clr: rgba(74, 74, 74, 1);
-  --nav-button-lines: black;
-  --post-card-tag-bg-color: black;
-  --post-card-border-clr: rgba(120, 120, 120, 1);
-  --post-card-boxshdw-clr: rgba(100, 100, 100, 1);
-  --post-card-image-outline: rgba(100, 100, 100, 1);
-  --post-header-bg-color: white;
-  --home-btn-bg: white;
-  --home-btn-clr: black;
-  --home-btn-border: black;
-  --home-btn-boxshdw: gray;
-  --other-post-bg: white;
-  --other-post-border: black;
-  --other-post-ptr-clr: white;
-  --other-post-ptr-bg: black;
-  --other-post-title-clr: black;
-  --footer-bg-color: rgba(255, 255, 255, 0.9);
-  --post-page-bg: rgba(255, 255, 255, 0.9);
-  --post-page-thead-bg: rgba(255, 247, 240, 1);
-  --post-table-border: darkgray;
-  --post-code-bg: bisque;
-  --post-code-clr: black;
-  --post-h-color: black;
-  --post-strong-em-color: rgba(0, 0, 0, 0.9);
-  --post-a-color: black;
-  --post-bq-border: black;
-  --post-tr-hover: rgba(100, 100, 100, 0.2);
-  --text-decoration-color: coral;
-  --margin-between-cards: 15px;
+  --color-twitter: rgb(29, 161, 242);
+  --color-link-bg: rgb(200, 200,200, 0.25);
 }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -87,7 +56,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $sans-serif;
   box-sizing: border-box;
   background: var(--color-bg);
   height: 100vh;
@@ -125,7 +94,6 @@ a {
   color: initial;
 }
 
-@import "vars";
 @import "typography";
 @import "flex";
 @import "spacing";
@@ -136,5 +104,5 @@ a {
 @import "list";
 @import "summary";
 @import "featured-posts";
-@import "post";
+@import "single";
 @import "footer";

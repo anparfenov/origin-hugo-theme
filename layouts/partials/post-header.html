@@ -6,10 +6,19 @@
       <div class="header__description">{{.}}</div>
       {{end}}
     </div>
+    {{with .Params.tags}}
     <nav class="header-nav desktop">
       <ul class="header-nav-list">
+        {{ range . }}
+        <li class="header-nav-list__item">
+            <a class="header-nav-list__link" href="{{ "tags" | absURL }}{{. | urlize}}"
+            >{{ . }}</a
+          >
+        </li>
+        {{end}}
       </ul>
     </nav>
+    {{end}}
     <button class="mb-header__menu-btn">
       <span class="mb-header__menu-btn-line"></span>
       <span class="mb-header__menu-btn-line"></span>
@@ -43,8 +52,17 @@
         </svg>
       </button>
     </div>
+    {{with .Params.tags}}
     <ul class="mb-header-nav-list mobile">
+      {{ range . }}
+      <li class="mb-header-nav-list__item">
+          <a class="mb-header-nav-list__link" href="{{ "tags" | absURL}}{{. | urlize}}"
+          >{{.}}</a
+        >
+      </li>
+      {{end}}
     </ul>
+    {{end}}
   </nav>
 </header>
 

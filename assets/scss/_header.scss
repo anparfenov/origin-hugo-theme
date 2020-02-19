@@ -179,8 +179,8 @@ header {
   transform: translateX(-6px);
   padding: 1rem;
   background: var(--color-header-bg);
-  border: 3px solid var(--box-color);
-  box-shadow: 11px 11px var(--box-color);
+  border: 3px solid var(--color-header-border);
+  box-shadow: 11px 11px var(--color-header-border);
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -193,7 +193,7 @@ header {
 .header-frame:after {
   content: "";
   position: absolute;
-  background: var(--box-color);
+  background: var(--color-header-border);
   width: 15px;
   height: 15px;
   left: 1px;
@@ -204,7 +204,7 @@ header {
 .header-frame:before {
   content: "";
   position: absolute;
-  background: var(--box-color);
+  background: var(--color-header-border);
   width: 15px;
   height: 15px;
   right: -11px;
