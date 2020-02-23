@@ -1,7 +1,10 @@
 .post {
   width: 100%;
-  max-width: 1024px;
+  max-width: $screen-lg;
   margin: 0 auto;
+  @media (min-width: $screen-lg) {
+    width: 80%;
+  }
 }
 .post-content {
   h1{
@@ -62,6 +65,7 @@
   }
   .highlight pre {
     padding: 1rem;
+    overflow: auto;
   }
   .highlight code {
     color: inherit;
@@ -72,21 +76,24 @@
   ul {
     list-style-type: disc;
     padding-left: 1rem;
+    color: var(--color-text-2);
   }
   ol {
     list-style-type: decimal;
     padding-left: 1rem;
+    color: var(--color-text-2);
   }
-  a {
+  a,a:any-link {
     color: var(--color-link);
     border-bottom: 1px solid var(--color-border);
   }
-  a:hover {
+  a:hover, a:hover:any-link {
     border-bottom: 3px solid var(--color-border);
     background-color: var(--color-link-bg);
   }
   table {
     margin: 0.5rem 0; 
+    color: var(--color-text-2);
   }
   table th {
     padding: 0.5rem;

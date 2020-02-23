@@ -1,6 +1,31 @@
 <head>
-    <title>{{ .Title }}</title>
+    <meta charset="UTF-8">
+    <title>{{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}" />
+    <meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{.Page.Permalink}}" />
+    <meta itemprop="name" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}">
+    <meta itemprop="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}"/>
+    <meta name="twitter:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}"/>
+
+    {{ if (fileExists "static/apple-touch-icon.png") -}}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    {{ end -}}
+    {{ if (fileExists "static/favicon-32.png") -}}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    {{ end -}}
+    {{ if (fileExists "static/favicon-16.png") -}}
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    {{ end -}}
+    {{ if (fileExists "static/site.webmanifest") -}}
+        <link rel="manifest" href="/site.webmanifest">
+    {{ end -}}
+
     {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{$style.Permalink}}" >
+    <link rel="stylesheet" href="{{$style.RelPermalink}}" >
 </head>

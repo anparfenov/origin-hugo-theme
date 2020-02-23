@@ -1,4 +1,4 @@
-<footer>
+<footer class="post-footer">
     <div class="footer">
         {{with .Site.Copyright }}
             <div>{{ . | safeHTML }}</div>
@@ -7,4 +7,4 @@
     </div>
 </footer>
 {{$script := resources.Get "js/script.js"}}
-<script src="{{$script.RelPermalink}}"></script>
+<script src="{{$script.Permalink}}"></script>

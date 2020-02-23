@@ -21,4 +21,15 @@
   &--md {
     padding: 2rem;   
   }
+  &l-sm {
+    padding-left: 1rem;
+  }
+}
+.m {
+  &b-sm {
+    margin-bottom: 1rem;
+  }
+  &b-xs {
+    margin-bottom: 0.5rem;
+  }
 }

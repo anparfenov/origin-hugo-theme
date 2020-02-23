@@ -1,0 +1,24 @@
+{{define "main"}}
+    <div class="not-found">
+        <div class="not-found__left">
+            <h2 class="not-found__htext">404</h2>
+            <a href="/" class="not-found__home-button">home</a>
+        </div>
+        <div class="not-found__right">
+            <h2 class="not-found__htext pl-sm">Latest Posts</h2>
+            <ul class="not-found__posts">
+                {{range first 3 .Site.RegularPages}}
+                    <li class="not-found__post">
+                        <a href={{.Permalink}}>
+                            <div class="not-found__title mb-xs">{{.Title}}</div>
+                            <div class="mb-sm">
+                                <time datetime={{.Date}}>{{.Date.Format "2006-01-02"}}</time>
+                            </div>
+                            <div>{{.Description}}</div>
+                        </a>
+                    </li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+{{end}}

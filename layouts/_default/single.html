@@ -5,4 +5,8 @@
 <article class="post">
     <div class="post-content">{{.Content}}</div>
 </article>
+{{ partial "button" . }}
+{{end}}
+{{define "footer"}}
+    {{partial "post-footer" .}}
 {{end}}

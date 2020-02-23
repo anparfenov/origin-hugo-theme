@@ -1,3 +1,14 @@
-<div>
-    {{.Title}}
-</div>
+{{define "header"}}
+    {{partial "list-header" .}}
+{{end}}
+{{define "main"}}
+<ul class="post-list">
+    {{ range .Pages }}
+        {{.Render "li"}}
+    {{end}}
+</ul>
+{{partial "button" .}}
+{{end}}
+{{define "footer"}}
+    {{partial "post-footer" .}}
+{{end}}

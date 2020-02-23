@@ -1,3 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
 @mixin flex-align($options) {
     @if $option == center {
        align-items: center;

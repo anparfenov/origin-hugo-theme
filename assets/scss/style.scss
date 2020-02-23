@@ -5,7 +5,7 @@
   --color-card-bg: rgba(250,250,250,0.8);
   --color-header-bg: white;
   --color-text: black;
-  --color-text-2: #333333;
+  --color-text-2: #222222;
   --color-text-light: white;
   --color-text-light-2: rgba(255,255,255,0.9);
   --color-link: #0F4C81;
@@ -17,6 +17,7 @@
   --color-boxshadow: rgba(100,100,100,1);
   --color-boxshadow-dark: rgba(70,70,70,1);
   --color-extra: #ffecbc;
+  --color-extra-2: #fcb279;
   --color-footer-bg: rgba(250,250,250,0.8);
   --color-code-bg: rgba(100,100,100,1);
   --color-table-bg: rgba(200,200,200);
@@ -94,10 +95,12 @@ a {
   color: initial;
 }
 
+@import "mixins";
 @import "typography";
 @import "flex";
 @import "spacing";
 @import "header";
+@import "list-header";
 @import "main";
 @import "pagination";
 @import "li";
@@ -106,3 +109,5 @@ a {
 @import "featured-posts";
 @import "single";
 @import "footer";
+@import "button";
+@import "404";

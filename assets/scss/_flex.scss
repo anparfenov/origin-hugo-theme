@@ -1,4 +1,15 @@
 .flex {
+  &-1 {
+    flex: 1;
+  }
+  &-col{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  &-row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
   &-between{
     display: flex;
     justify-content: space-between;
