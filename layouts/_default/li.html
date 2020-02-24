@@ -13,7 +13,7 @@
         </a>
         {{end}}
         {{if isset .Params "tags"}}
-        <a href="/tags/{{index .Params.tags 0 | urlize}}" class="post-item__tag">
+            <a href="{{.Site.BaseURL}}tags/{{index .Params.tags 0 | urlize}}" class="post-item__tag">
             {{index .Params.tags 0}}
         </a>
         {{end}}
