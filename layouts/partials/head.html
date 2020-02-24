@@ -27,5 +27,5 @@
     {{ end -}}
 
     {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{$style.RelPermalink}}" >
+    <link rel="stylesheet" href="{{$style.Permalink}}" >
 </head>
