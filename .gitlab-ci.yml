@@ -9,6 +9,6 @@ pages:
   - cd exampleSite && hugo --gc --themesDir ..
   artifacts:
     paths:
-    - exampleSite/public
+    - public
   only:
   - master
