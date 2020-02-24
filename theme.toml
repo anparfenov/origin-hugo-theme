@@ -1,11 +1,11 @@
 name = "Origin"
 license = "MIT"
-licenselink = ""
+licenselink = "https://gitlab.com/asleeppiano/origin-hugo-theme/-/blob/master/LICENSE"
 description = "simple theme for hugo"
-homepage = "http://example.com/"
+homepage = ""
 tags = ["blog", "responsive", "light", "simple"]
 features = []
-min_version = "0.41"
+min_version = "0.60"
 
 [author]
   name = "Andrey Parfenov"

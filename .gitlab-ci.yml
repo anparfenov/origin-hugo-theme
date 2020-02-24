@@ -5,8 +5,8 @@ variables:
 
 pages:
   script:
-  - cd exampleSite
-  - hugo --gc --themesDir ../..
+  - mkdir origin && cp -r archetypes/ assets/ layouts/ static/ theme.toml origin/
+  - cd exampleSite && hugo --gc --themesDir ..
   artifacts:
     paths:
     - exampleSite/public
