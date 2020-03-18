@@ -1,6 +1,6 @@
 <div class="featured-post">
-    {{if isset .Params "image"}}
-        <img class="featured-post__image" src="{{printf "%s%s" .File.Dir .Params.image | absURL }}" alt="{{.Params.imageTitle}}" />
+    {{if (or (isset .Params "image") (isset .Params "imagelink"))}}
+    <img class="featured-post__image" src="{{ if isset .Params "image"}}{{printf "%s%s" .File.Dir .Params.image | absURL }}{{else if (isset .Params "imagelink")}}{{.Params.imagelink}}{{end}}" alt="{{.Params.imageTitle}}" />
         <div class="featured-post__image-filter"></div>
     {{end}}
     <a href="{{.Permalink}}" class="featured-post__wrapper">

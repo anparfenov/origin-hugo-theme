@@ -15,6 +15,10 @@
   transition-duration: 0.2s, 0.3s;
   transition-timing-function: ease;
 
+  @media (min-width: $screen-lg) {
+    padding: 1rem 4%;
+  }
+
   &:hover {
     transform: translate(4px, 4px);
     box-shadow: 1px 1px var(--color-boxshadow);

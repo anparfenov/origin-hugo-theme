@@ -44,6 +44,13 @@
   p {
     margin: 1rem 0;
     color: var(--color-text-2);
+    font-size: 1rem;
+    @media (min-width: $screen-sm) {
+      font-size: 1.125rem;
+    }
+    @media (min-width: $screen-lg) {
+      font-size: 1.25rem;
+    }
   }
   blockquote {
     margin-left: 1rem;
