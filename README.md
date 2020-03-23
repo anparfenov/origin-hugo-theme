@@ -2,6 +2,8 @@
 
 simple hugo theme for blogging
 
+[demo](https://asleeppiano.gitlab.io/origin-hugo-site/)
+
 ![screenshot](images/screenshot.png)
 
 # Installation
