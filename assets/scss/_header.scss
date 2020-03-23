@@ -17,6 +17,9 @@ header {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    &--nomargin {
+      margin-bottom: 0;
+    }
   }
 }
 .header-nav-list {

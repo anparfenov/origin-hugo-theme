@@ -1,7 +1,9 @@
 <header>
     <div class="header header-frame">
         <div>
-            <div class="header__title">{{.Title}}</div>
+          {{with .Title}}
+            <div class="header__title">{{.}}</div>
+          {{end}}
             {{with .Description}}
                 <div class="header__description">{{.}}</div>
             {{end}}

@@ -3,7 +3,11 @@
 {{end}}
 {{define "main"}}
 <article class="post">
+  {{if .Content}}
     <div class="post-content">{{.Content}}</div>
+  {{else}}
+    <div class="post-content--nopost">Author leaves no content for this post :( </div>
+  {{end}}
 </article>
 {{ partial "button" . }}
 {{end}}
