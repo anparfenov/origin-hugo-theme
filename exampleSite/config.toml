@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://example.com"
 title = "Origin"
 author = "Andrey Parfenov"
 copyright = "© 2020, Andrey Parfenov"
