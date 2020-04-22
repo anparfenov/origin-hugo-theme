@@ -1,9 +1,12 @@
 #content {
+  flex: 1 0 auto;
   width: 100%;
   padding: 2%; 
   max-width: $screen-max; 
   margin: 0 auto;
   background: var(--color-bg);
+  display: flex;
+  flex-flow: column nowrap;
   @media (min-width: $screen-lg) {
     padding: 4%;
   }

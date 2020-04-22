@@ -1,0 +1,71 @@
+<nav class="navigation">
+    <div class="navigation__wrapper">
+        <div class="navigation__container">
+            <svg
+                width="240"
+                height="72"
+                viewBox="0 0 240 72"
+                class="mb-header-nav__title"
+                >
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                Tags
+                </text>
+            </svg>
+            <ul class="navigation__list">
+                {{if .IsHome}}
+                {{ range .Site.Taxonomies.tags }}
+                    <li class="navigation__list-item">
+                        <a class="navigation__link" href="{{ .Page.Permalink}}">{{.Page.Title}}</a>
+                    </li>
+                        {{end}}
+                {{else}}
+                    {{range .Params.tags}}
+                        {{with $.Site.GetPage (printf "/%s/%s" "tags" ( . | urlize ))}}
+                    <li class="navigation__list-item">
+                        <a class="navigation__list" href="{{ .Permalink}}">{{.Title}}</a>
+                    </li>
+                        {{end}}
+                    {{end}}
+                {{end}}
+            </ul>
+        </div>
+        <div class="navigation__container">
+            <svg
+                width="240"
+                height="72"
+                viewBox="0 0 240 72"
+                class="mb-header-nav__title"
+                >
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                Menu
+                </text>
+            </svg>
+            <ul class="navigation__list">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                        <li class="navigation__list-item">
+                            <a class="navigation__list" href="#">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
+                        <ul class="navigation__list">
+                            {{ range .Children }}
+                                <li class="navigation__list-item">
+                                    <a class="navigation__list" href="{{ .URL }}">{{ .Name }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ else }}
+                        <li class="navigation__list-item">
+                            <a class="navigation__link" href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

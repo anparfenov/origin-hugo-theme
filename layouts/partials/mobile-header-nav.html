@@ -1,6 +1,23 @@
-<nav class="mb-header-nav">
-    <button class="mb-header-nav__close-btn flex-center">
-        <svg
+<nav id="mobile-header-nav" class="mb-header-nav">
+  {{ $cssonly := isset .Site.Params "cssonly" }}
+  {{ if $cssonly }}
+  <a href="#" class="mb-header-nav__close-btn">
+    <svg
+            class="mb-header-nav__svg-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            >
+            <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+            <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+  </a>
+  {{else}}
+  <button class="mb-header-nav__close-btn flex-center">
+    <svg
             class="mb-header-nav__svg-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -13,6 +30,7 @@
             <path d="M0 0h24v24H0z" fill="none" />
         </svg>
     </button>
+    {{end}}
     <div class="mb-header-nav__wrapper">
         <div class="mb-header-nav__container">
             <svg
@@ -28,7 +46,7 @@
             <ul class="mb-header-nav-list">
                 {{if .IsHome}}
                 {{ range .Site.Taxonomies.tags }}
-                    <li class="mb-header-nav-list__item">
+                  <li class="mb-header-nav-list__item {{ if $cssonly }} cssonly {{ end }}">
                         <a class="mb-header-nav-list__link" href="{{ .Page.Permalink}}"
                                                             >{{.Page.Title}}</a
                                                         >
@@ -37,7 +55,7 @@
                 {{else}}
                     {{range .Params.tags}}
                         {{with $.Site.GetPage (printf "/%s/%s" "tags" ( . | urlize ))}}
-                    <li class="mb-header-nav-list__item">
+                          <li class="mb-header-nav-list__item {{if $cssonly}} cssonly {{end}}">
                         <a class="mb-header-nav-list__link" href="{{ .Permalink}}"
                                                             >{{.Title}}</a
                                                         >
@@ -62,7 +80,7 @@
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
-                        <li class="mb-header-nav-list__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                      <li class="mb-header-nav-list__item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} {{if $cssonly}} cssonly {{end}}">
                             <a class="mb-header-nav-list__link" href="#">
                                 {{ .Pre }}
                                 <span>{{ .Name }}</span>
@@ -70,13 +88,13 @@
                         </li>
                         <ul class="mb-header-nav-list">
                             {{ range .Children }}
-                                <li class="mb-header-nav-list__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                              <li class="mb-header-nav-list__item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }} {{if $cssonly}} cssonly {{end}}">
                                     <a class="mb-header-nav-list__link" href="{{ .URL }}">{{ .Name }}</a>
                                 </li>
                             {{ end }}
                         </ul>
                     {{ else }}
-                        <li class="mb-header-nav-list__item">
+                      <li class="mb-header-nav-list__item {{ if $cssonly }} cssonly {{ end }}">
                             <a class="mb-header-nav-list__link" href="{{ .URL }}">
                                 {{ .Name }}
                             </a>

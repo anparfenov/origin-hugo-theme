@@ -40,7 +40,6 @@ if (burgerButton) {
     window.requestAnimationFrame(() => {
       headerNavMobile.style.opacity = "1";
       headerNavListItems.forEach((item, i) => {
-        console.log(item);
         setTimeout(() => {
           item.style.opacity = 1;
         }, 90 * i);

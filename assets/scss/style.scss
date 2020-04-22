@@ -55,12 +55,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body {
+  height: 100%;
+}
 body {
   line-height: 1;
   font-family: $sans-serif;
   box-sizing: border-box;
   background: var(--color-bg);
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -100,6 +102,7 @@ a {
 @import "flex";
 @import "spacing";
 @import "header";
+@import "navigation";
 @import "list-header";
 @import "main";
 @import "pagination";

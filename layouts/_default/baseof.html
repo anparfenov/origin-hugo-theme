@@ -2,11 +2,13 @@
 <html>
   {{- partial "head.html" . -}}
   <body>
-     {{- block "header" .}}{{- end }}
-      <div id="content">
-        {{- block "main" . }}{{- end }}
-      </div>
-      {{- block "footer" . }}{{- end}}
+    {{- block "header" .}}{{- end }}
+    <div id="content">
+      {{- block "main" . }}{{- end }}
+    </div>
+    {{- block "footer" . }}{{- end}}
+    {{ if not (isset .Site.Params "cssonly") }}
       {{ partial "script.html" . }}
+    {{end}}
   </body>
 </html>

@@ -25,18 +25,17 @@
         {{ end }}
     {{end}}
 
-    {{ partial "pagination" . }}
 </div>
+{{ partial "pagination" . }}
+
 {{else}}
 <div class="post-list">
     {{ range $paginator.Pages }}
         {{ .Render "li" }}
     {{ end }}
-
-    {{ partial "pagination" . }}
 </div>
+{{ partial "pagination" . }}
 {{end}}
-
 {{end}}
 {{define "footer"}}
     {{partial "footer" .}}

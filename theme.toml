@@ -4,9 +4,8 @@ licenselink = "https://gitlab.com/asleeppiano/origin-hugo-theme/-/blob/master/LI
 description = "simple theme for hugo"
 homepage = "https://asleeppiano.gitlab.io/origin-hugo-site/"
 tags = ["blog", "responsive", "light", "simple"]
-features = []
-min_version = "0.60"
+features = ["pagination", "single-column", "syntax-highlighting"]
+min_version = "0.60.0"
 
 [author]
   name = "Andrey Parfenov"
-  homepage = ""

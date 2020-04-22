@@ -24,11 +24,20 @@ git submodule add https://gitlab.com/asleeppiano/origin-hugo-theme.git themes/or
 
 # Featured posts
 
-You can replace homescreen grid with default post list item.
+You can replace homescreen grid with default post list items.
 
 edit config.toml
 
 ```toml
 [params]
   featured = false
+```
+
+# JS
+
+If you want to disable js, set cssonly parameter to true.
+
+```toml
+[params]
+  cssonly = true
 ```

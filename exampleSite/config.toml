@@ -2,7 +2,7 @@ baseURL = "https://example.com"
 title = "Origin"
 author = "Andrey Parfenov"
 copyright = "© 2020, Andrey Parfenov"
-paginate = 10
+paginate = 4
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
@@ -13,6 +13,7 @@ favicon = ""
 [params]
   description = "simple hugo theme"
   featured = true
+  cssonly = true
   facebook = ""
   twitter = ""
   instagram = ""
@@ -41,3 +42,7 @@ favicon = ""
   [markup.highlight]
     style = "github"
     tabWidth = 4
+
+[markup.goldmark.renderer]
+unsafe = true
+

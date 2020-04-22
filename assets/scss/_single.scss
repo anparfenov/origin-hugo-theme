@@ -77,6 +77,10 @@
     padding: 0;
     border-radius: inherit;
   }
+  .highlight {
+    box-shadow: 5px 5px var(--color-boxshadow);
+    border: 1px solid var(--color-border);
+  }
   .highlight pre {
     padding: 1rem;
     overflow: auto;

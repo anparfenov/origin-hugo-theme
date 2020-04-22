@@ -7,7 +7,7 @@ tags = [
     "shortcodes",
     "privacy",
 ]
-image = "photo.webp"
+imagelink = "https://images.unsplash.com/photo-1587129980116-d44492ecc7bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 +++
 
 Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.

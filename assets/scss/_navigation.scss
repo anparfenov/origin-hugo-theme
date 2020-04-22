@@ -1,0 +1,35 @@
+.navigation {
+    top: 5.5rem;
+    right:0;
+    width: 100%;
+    max-height: calc(100vh - 5.5rem);
+    overflow: hidden;
+    position: fixed;
+    display: none;
+    opacity: 1;
+    background-color: var(--color-extra);
+    &__wrapper {
+        padding: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__container {
+        flex: 1 1 50%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    &__list {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    &__list-item {
+      font-size: 1.25rem;
+    }
+    &__list-item:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+    }
+    &__link:link:hover {
+        border-bottom: 1px solid black;
+    }
+}

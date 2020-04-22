@@ -34,13 +34,26 @@
           {{ end }}
         {{ end }}
       </ul>
-      <button class="header-nav-list__nav-btn">navigation</button>
+      <button class="header-nav-list__nav-btn {{ if isset .Site.Params "cssonly"}} css-only {{ end }}">navigation</button>
+      {{partial "navigation" .}}
     </nav>
-    <button class="mb-header__menu-btn">
-      <span class="mb-header__menu-btn-line"></span>
-      <span class="mb-header__menu-btn-line"></span>
-      <span class="mb-header__menu-btn-line"></span>
-    </button>
+    {{if isset .Site.Params "cssonly"}}
+    <a href="#mobile-header-nav" class="mb-header__menu-btn">
+        <span class="mb-header__menu-btn-line"></span>
+        <span class="mb-header__menu-btn-line"></span>
+        <span class="mb-header__menu-btn-line"></span>
+      </a>
+    {{else}}
+      <button class="{{ if isset .Site.Params "cssonly"}} css-only {{ end }} mb-header__menu-btn ">
+        <span class="mb-header__menu-btn-line"></span>
+        <span class="mb-header__menu-btn-line"></span>
+        <span class="mb-header__menu-btn-line"></span>
+      </button>
+    {{end}}
   </div>
+  {{if isset .Site.Params "cssonly"}}
   {{partial "mobile-header-nav" .}}
+  {{else}}
+  {{partial "mobile-popup" .}}
+  {{end}}
 </header>

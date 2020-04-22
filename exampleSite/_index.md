@@ -1,4 +1,2 @@
-+++
-author = "Hugo Authors"
-+++
+# Document Title
 

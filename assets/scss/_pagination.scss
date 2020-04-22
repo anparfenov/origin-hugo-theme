@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 3rem auto 0 auto;
+  @media (min-width: $screen-lg) {
+    width: 80%;
+  }
   &__item {
     width: 48px;
     height: 48px;
