@@ -110,9 +110,12 @@
     background-color: var(--color-link-bg);
   }
   table {
+    overflow:auto;
+    max-width: 100%;
     margin: 0.5rem 0; 
     color: var(--color-text-2);
   }
+
   table th {
     padding: 0.5rem;
     background: var(--color-extra);
@@ -128,6 +131,37 @@
   table tbody tr:hover {
     background: var(--color-hover);
     color: var(--color-text-light);
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
   }
   cite {
     font-family: $monospace;
