@@ -13,7 +13,7 @@ favicon = ""
 [params]
   description = "simple hugo theme"
   featured = true
-  cssonly = true
+  cssonly = false
   facebook = ""
   twitter = ""
   instagram = ""

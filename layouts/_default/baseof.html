@@ -7,8 +7,12 @@
       {{- block "main" . }}{{- end }}
     </div>
     {{- block "footer" . }}{{- end}}
-    {{ if not (isset .Site.Params "cssonly") }}
-      {{ partial "script.html" . }}
+    {{ with .Site.Params.cssonly}}
+      {{if eq . false}}
+        {{ partial "script.html" . }}
+      {{end}}
+    {{ else }}
+      {{ partial "script.html" }}
     {{end}}
   </body>
 </html>

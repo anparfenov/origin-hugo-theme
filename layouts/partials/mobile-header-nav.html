@@ -1,5 +1,5 @@
 <nav id="mobile-header-nav" class="mb-header-nav">
-  {{ $cssonly := isset .Site.Params "cssonly" }}
+  {{ $cssonly := .Site.Params.cssonly }}
   {{ if $cssonly }}
   <a href="#" class="mb-header-nav__close-btn">
     <svg
