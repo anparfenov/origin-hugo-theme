@@ -1,5 +1,5 @@
 {{ $icon_size := "32px" }}
-{{ with .Param "stackoverflow" }}
+{{ with .Site.Params.socials.stackoverflow}}
 <a
   href="{{ . }}"
   target="_blank"
@@ -11,7 +11,7 @@
   {{partial "svg/iconmonstr-stackoverflow-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "facebook" }}
+{{ with .Site.Params.socials.facebook }}
 <a
   href="{{ . }}"
   target="_blank"
@@ -23,7 +23,7 @@
   {{partial "svg/iconmonstr-facebook-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "twitter" }}
+{{ with .Site.Params.socials.twitter}}
 <a
   href="{{ . }}"
   target="_blank"
@@ -35,7 +35,7 @@
   {{partial "svg/iconmonstr-twitter-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "instagram" }}
+{{ with .Site.Params.socials.instagram}}
 <a
   href="{{ . }}"
   target="_blank"
@@ -47,7 +47,7 @@
   {{partial "svg/iconmonstr-instagram-12.svg"}}
 </a>
 {{ end }}
-{{ with .Param "youtube" }}
+{{ with .Site.Params.socials.youtube }}
 <a
   href="{{ . }}"
   target="_blank"
@@ -59,7 +59,7 @@
   {{partial "svg/iconmonstr-youtube-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "linkedin" }}
+{{ with .Site.Params.socials.linkedin}}
 <a
   href="{{ . }}"
   target="_blank"
@@ -71,7 +71,7 @@
   {{partial "svg/iconmonstr-linkedin-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "github" }}
+{{ with .Site.Params.socials.github}}
 <a
   href="{{ . }}"
   target="_blank"
@@ -83,7 +83,7 @@
   {{partial "svg/iconmonstr-github-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "gitlab" }}
+{{ with .Site.Params.socials.gitlab }}
 <a
   href="{{ . }}"
   target="_blank"
@@ -92,9 +92,10 @@
   rel="noopener"
   aria-label="follow on Gitlab——Opens in a new window"
 >
+  {{partial "svg/gitlab-icon.svg"}}
 </a>
 {{ end }}
-{{ with .Param "medium" }}
+{{ with .Site.Params.socials.medium }}
 <a
   href="{{ . }}"
   target="_blank"
@@ -106,7 +107,7 @@
   {{partial "svg/iconmonstr-medium-2.svg"}}
 </a>
 {{ end }}
-{{ with .Param "slack" }}
+{{ with .Site.Params.socials.slack }}
 <a
   href="{{ . }}"
   target="_blank"

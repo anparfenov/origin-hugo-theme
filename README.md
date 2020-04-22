@@ -41,3 +41,7 @@ If you want to disable js, set cssonly parameter to true.
 [params]
   cssonly = true
 ```
+
+# Favicon
+
+add favicon with name "favicon-32.png" to static folder.

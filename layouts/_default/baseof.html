@@ -6,7 +6,9 @@
     <div id="content">
       {{- block "main" . }}{{- end }}
     </div>
+    {{if (or (isset .Site.Params "socials") (ne .Site.Copyright "")) }}
     {{- block "footer" . }}{{- end}}
+    {{end}}
     {{ with .Site.Params.cssonly}}
       {{if eq . false}}
         {{ partial "script.html" . }}

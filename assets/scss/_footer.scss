@@ -21,6 +21,11 @@ footer {
   &__socials {
     display: flex;
     align-items:center;
+    flex-flow: row wrap;
+    margin: 0.5rem;
+  }
+  &__copyright {
+    margin: 0.5rem;
   }
 }
 .post-footer {
@@ -29,3 +34,18 @@ footer {
     padding-right: 1%;
   }
 }
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media (min-width: $screen-md) {
+
+  .social-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin:0;
+  }
+} 

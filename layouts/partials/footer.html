@@ -1,7 +1,7 @@
 <footer>
     <div class="footer">
         {{with .Site.Copyright }}
-            <div>{{ . | safeHTML }}</div>
+            <div class="footer__copyright">{{ . | safeHTML }}</div>
         {{end}}
         <div class="footer__socials">{{partial "social.html" .}}</div>
     </div>
