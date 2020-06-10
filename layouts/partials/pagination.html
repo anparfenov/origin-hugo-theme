@@ -32,7 +32,7 @@
     <!-- First page. -->
     {{ if ne $paginator.PageNumber 1 }}
     <div class="pagination__item pagination__item--first">
-      <a class="pagination__link pagination__link--first" href="{{ $paginator.First.URL }}">
+      <a aria-label="first page" class="pagination__link pagination__link--first" href="{{ $paginator.First.URL }}">
         <svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="15.5,5 11,5 16,12 11,19 15.5,19 20.5,12"/><polygon points="8.5,5 4,5 9,12 4,19 8.5,19 13.5,12"/></g></g></svg>
       </a>
     </div>
@@ -41,7 +41,7 @@
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
     <div class="pagination__item pagination__item--previous">
-      <a href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
+      <a aria-label="previous page" href="{{ $paginator.Prev.URL }}" class="pagination__link pagination__link--previous">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
       </a>
     </div>
@@ -109,7 +109,7 @@
     <!-- Next page. -->
     {{ if $paginator.HasNext }}
     <div class="pagination__item pagination__item--next">
-      <a href="{{ $paginator.Next.URL }}" class="pagination__link pagination__link--next">
+      <a aria-label="next page" href="{{ $paginator.Next.URL }}" class="pagination__link pagination__link--next">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
       </a>
     </div>
@@ -118,7 +118,7 @@
     <!-- Last page. -->
     {{ if ne $paginator.PageNumber $paginator.TotalPages }}
     <div class="pagination__item pagination__item--last">
-      <a class="pagination__link pagination__link--last" href="{{ $paginator.Last.URL }}">
+      <a aria-label="last page" class="pagination__link pagination__link--last" href="{{ $paginator.Last.URL }}">
         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="15.5,5 11,5 16,12 11,19 15.5,19 20.5,12"/><polygon points="8.5,5 4,5 9,12 4,19 8.5,19 13.5,12"/></g></g></svg>
       </a>
     </div>

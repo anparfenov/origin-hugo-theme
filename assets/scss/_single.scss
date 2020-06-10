@@ -1,6 +1,6 @@
 .post {
   width: 100%;
-  max-width: $screen-lg;
+  max-width: var(--max-post-width);
   margin: 0 auto;
   @media (min-width: $screen-lg) {
     width: 80%;
@@ -12,17 +12,17 @@
     text-align: center;
   }
   h1{
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: bold;
     margin: 1rem 0;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
     margin: 0.825rem 0;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: semibold;
     margin: 0.825rem 0;
   }
@@ -39,19 +39,19 @@
     font-size: 0.75rem;
     margin: 0.825rem 0;
   }
-  h1,h2,h3,h4,h5,h6,p,code,blockquote,a,ul,ol {
+  h1,h2,h3,h4,h5,h6,p,code,blockquote,a,ul,ol,li {
     line-height: 1.4;
     @media (min-width: $screen-lg) {
       line-height: 1.5;
     }
   }
-  p, code, blockquote, a, table, pre,ul,ol {
+  p, code, blockquote, a, table, pre,ul,ol,li {
     font-size: 1rem;
     @media (min-width: $screen-sm) {
-      font-size: 1.125rem;
+      font-size: 1.1rem;
     }
     @media (min-width: $screen-lg) {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       line-height: 1.5;
     }
   }
@@ -100,6 +100,9 @@
     list-style-type: decimal;
     padding-left: 1rem;
     color: var(--color-text-2);
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 0.8rem;
   }
   a,a:any-link {
     color: var(--color-link);

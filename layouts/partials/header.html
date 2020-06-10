@@ -39,14 +39,14 @@
     </nav>
     {{with .Site.Params.cssonly}}
       {{ if eq . true }}
-        <a href="#mobile-header-nav" class="mb-header__menu-btn">
+        <a aria-label="burger menu" href="#mobile-header-nav" class="mb-header__menu-btn">
           <span class="mb-header__menu-btn-line"></span>
           <span class="mb-header__menu-btn-line"></span>
           <span class="mb-header__menu-btn-line"></span>
         </a>
       {{end}}
     {{else}}
-      <button class="mb-header__menu-btn">
+      <button aria-label="burger menu" class="mb-header__menu-btn">
         <span class="mb-header__menu-btn-line"></span>
         <span class="mb-header__menu-btn-line"></span>
         <span class="mb-header__menu-btn-line"></span>
