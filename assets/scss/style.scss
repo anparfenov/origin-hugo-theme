@@ -1,5 +1,14 @@
 @import "vars";
+@font-face {
+    font-family: "roozname";
+    src: local(''),
+       url('../fonts/a.rooznameh-webfont.woff2') format('woff2'),
+         url('../fonts/a.rooznameh-webfont.woff') format('woff'),
+         url('../fonts/A.Rooznameh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
 :root {
   --color-bg: rgba(255,247,240, 1);
   --color-card-bg: rgba(250,250,250,0.8);
@@ -51,7 +60,10 @@ time, mark, audio, video {
 	font: inherit;
 	font-size: 100%;
 	vertical-align: baseline;
+  direction: rtl;
+
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -62,12 +74,14 @@ html, body {
 }
 body {
   line-height: 1;
-  font-family: $sans-serif;
+  font-family: "roozname";
   box-sizing: border-box;
   background: var(--color-bg);
   display: flex;
   flex-flow: column nowrap;
+
 }
+
 * {
   box-sizing: border-box;
 }

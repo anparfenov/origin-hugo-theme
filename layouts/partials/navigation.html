@@ -8,7 +8,7 @@
                 class="mb-header-nav__title"
                 >
                 <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
-                Tags
+                فهرست
                 </text>
             </svg>
             <ul class="navigation__list">
@@ -20,7 +20,7 @@
                         {{end}}
                 {{else}}
                     {{range .Params.tags}}
-                        {{with $.Site.GetPage (printf "/%s/%s" "tags" ( . | urlize ))}}
+                        {{with $.Site.GetPage (printf "/%s/%s" "صفحه" ( . | urlize ))}}
                     <li class="navigation__list-item">
                         <a class="navigation__list" href="{{ .Permalink}}">{{.Title}}</a>
                     </li>
@@ -37,7 +37,7 @@
                 class="mb-header-nav__title"
                 >
                 <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
-                Menu
+                صفحه
                 </text>
             </svg>
             <ul class="navigation__list">

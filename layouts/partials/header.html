@@ -1,8 +1,8 @@
 <header>
   <div class="header header-frame">
     <div>
-      <div class="header__title {{if not (isset .Site.Params "Description")}}header__title--nomargin{{end}}">{{.Site.Title}}</div>
-      {{if ( isset .Site.Params "Description")}}
+      <div class="header__title {{if not (isset .Site.Params "description")}}header__title--nomargin{{end}}">{{.Site.Title}}</div>
+      {{if ( isset .Site.Params "description")}}
         <div class="header__description">{{.Site.Params.Description}}</div>
       {{end}}
     </div>
@@ -34,7 +34,7 @@
           {{ end }}
         {{ end }}
       </ul>
-      <button class="header-nav-list__nav-btn {{ with .Site.Params.cssonly}} {{ if eq . true }} css-only {{ end }} {{end}}">navigation</button>
+      <button class="header-nav-list__nav-btn {{ with .Site.Params.cssonly}} {{ if eq . true }} css-only {{ end }} {{end}}">فهرست</button>
       {{partial "navigation" .}}
     </nav>
     {{with .Site.Params.cssonly}}

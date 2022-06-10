@@ -10,4 +10,14 @@
   @media (min-width: $screen-lg) {
     padding: 4%;
   }
+  @font-face {
+    font-family: "roozname";
+    src: local(''),
+       url('../fonts/a.rooznameh-webfont.woff2') format('woff2'),
+         url('../fonts/a.rooznameh-webfont.woff') format('woff'),
+         url('../fonts/A.Rooznameh.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
 }
