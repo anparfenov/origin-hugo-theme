@@ -4,7 +4,12 @@
 {{define "main"}}
 <article class="post">
   {{if .Content}}
-    <div class="post-content">{{.Content}}</div>
+    <div class="post-content">
+    {{ $content := .Content }}
+{{ $content = replaceRE `<a href="(https?://.+)">` `<a href="$1" target="_blank">` $content | safeHTML }}
+{{ $content = replaceRE `<a href="(mailto:.+)">` `<a href="$1" target="_blank">` $content | safeHTML }}
+{{ $content | safeHTML }}
+</div>
   {{else}}
     <div class="post-content--nopost">Author leaves no content for this post :( </div>
   {{end}}
