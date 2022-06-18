@@ -8,17 +8,17 @@
 }
 .post-content {
   &--nopost {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
   }
   h1{
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     font-weight: bold;
     padding-top: 2.5rem;
     margin-bottom: 1.5rem;
   }
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     padding-top: 2.5rem;
     margin-bottom: 1.2rem;
@@ -55,12 +55,12 @@
     }
   }
   p, code, blockquote, a, table, pre,ul,ol,li {
-    font-size: 1rem;
+    font-size: 1.5rem;
     @media (min-width: $screen-sm) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
     @media (min-width: $screen-lg) {
-      font-size: 1.125rem;
+      font-size: 1.5rem;
     }
   }
   p {

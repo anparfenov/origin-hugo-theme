@@ -1,5 +1,5 @@
 .featured-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "roozname";
   margin: 0 auto;
   @media (min-width: $screen-lg) {
@@ -173,33 +173,33 @@
     grid-area: first;
     .featured-post__title {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin: 0 0 1rem 0;
     }
     .featured-post__description {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
   &:nth-child(2) {
     grid-area: second;
     .featured-post__title {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 0.5rem 0;
     }
     .featured-post__description {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
   &:nth-child(3) {
     grid-area: third;
     .featured-post__title {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 0.5rem 0;
     }
     .featured-post__description {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 }
