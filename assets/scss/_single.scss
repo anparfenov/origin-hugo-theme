@@ -55,23 +55,24 @@
     }
   }
   p, code, blockquote, a, table, pre,ul,ol,li {
-    font-size: 1.5rem;
+    font-size: 1rem;
     @media (min-width: $screen-sm) {
-      font-size: 1.3rem;
+      font-size: 0.8rem;
     }
     @media (min-width: $screen-lg) {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
   }
   p {
     margin: 1rem 0;
+font-family: 'Vazirmatn', sans-serif;
     color: var(--color-text-2);
   }
   blockquote {
     margin-left: 1rem;
     padding-left: 1rem;
     border-left: 4px solid var(--color-border);
-    font-family: "roozname";
+    font-family: 'Vazirmatn', sans-serif;
   }
   code {
     padding: 1px 3px;
@@ -184,7 +185,8 @@
     }
   }
   cite {
-    font-family: "roozname";
+font-family: "roozname";
+font-size: 0.5rem;
   }
   sub {
     vertical-align: sub;
