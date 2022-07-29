@@ -2,7 +2,6 @@
         <div class="post-item-flex">
             <a class="{{if not (isset .Params "tags")}}no-tag{{end}} post-item__meta post-item--left" href="{{.Permalink}}">
             <h2 class="post-item__title">{{.Title}}</h2>
-            <time class="post-item__date" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
         {{if isset .Params "description"}}
             <div class="post-item__description">{{.Description}}</div>
         {{end}}

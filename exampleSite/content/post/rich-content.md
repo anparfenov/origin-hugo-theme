@@ -11,6 +11,14 @@ imagelink = "https://images.unsplash.com/photo-1587129980116-d44492ecc7bb?ixlib=
 +++
 
 Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 <!--more-->
 ---
 
